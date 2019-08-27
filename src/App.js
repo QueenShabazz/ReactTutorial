@@ -1,16 +1,20 @@
 import React from 'react';
+import List from './list'
 
-function App() {
-  const store = {lists, allCards};
-  let lists = [];
-  let allCards = {};
+function App(props) {
+
+  const myList = props.store.lists.map((list, index) => {
+    return <List key={index} header={list.header} allCards={props.store.allCards} cards={list.cardIds.map(id => props.store.allCards[id])}/>
+  });
+
   return (
-    <div class="App-list">
-      <section class="List">
-        <header class="List-header">
-          <h2>First list</h2>
+    <div className="App-list">
+      <section className="List">
+        <header className="List-header">
+          <h2>Trelloyes</h2>
         </header>
       </section>
+      {myList}
     </div>
   );
 }
