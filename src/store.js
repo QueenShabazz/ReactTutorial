@@ -1,5 +1,4 @@
-export default {
-    STORE = {
+export default  {
     lists: [
       {
         id: '1',
@@ -38,4 +37,3 @@ export default {
       'm': { id: 'm', title: 'Thirteenth card', content: 'lorem ipsum' },
     },
   }
-}
